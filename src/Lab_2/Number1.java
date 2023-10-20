@@ -10,7 +10,7 @@ public class Number1 {
         String arrival = scan.nextLine();
         System.out.println("Wayy: ");
         int way = scan.nextInt();
-        String[] times = arrival.split(":"); // разделител
+        String[] times = arrival.split(":"); // разделите
         String time1 = times[0];
         String time2 = times[1];
 
