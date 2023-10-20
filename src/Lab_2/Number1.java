@@ -8,7 +8,7 @@ public class Number1 {
 
         System.out.println("Enter arrival: ");
         String arrival = scan.nextLine();
-        System.out.println("Way: ");
+        System.out.println("Wayy: ");
         int way = scan.nextInt();
         String[] times = arrival.split(":"); // разделитель
         String time1 = times[0];
