@@ -8,6 +8,10 @@ public class Number1 {
 
         System.out.println("Enter arrival: "); //ввод данных
         String arrival = scan.nextLine();
+        if (!(arrival.contains(":"))){
+            System.out.println("FORMAT ERROR");
+            System.exit(0);
+        }
         System.out.println("Way: ");
         int way = scan.nextInt();
 
