@@ -6,15 +6,20 @@ public class Number1 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Enter arrival: "); //ввод данных
+        System.out.println("Enter arrival in format ##:## : "); //ввод данных
         String arrival = scan.nextLine();
-        if (!(arrival.contains(":"))){
+        if (!(arrival.contains(":"))){  //проверка данных
             System.out.println("FORMAT ERROR");
             System.exit(0);
         }
-        System.out.println("Way: ");
-        int way = scan.nextInt();
+        System.out.println("Enter way in min: ");
+        String way1 = scan.nextLine();
+        if (way1.matches("[a-zA-Z]+")){  //проверка данных
+            System.out.println("FORMAT ERROR");
+            System.exit(0);
+        }
 
+        int way = Integer.parseInt(way1);
         String[] times = arrival.split(":"); //формат вводных данных
         String time1 = times[0];
         String time2 = times[1];
