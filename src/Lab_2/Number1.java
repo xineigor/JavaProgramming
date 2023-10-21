@@ -10,7 +10,7 @@ public class Number1 {
         String arrival = scan.nextLine();
         System.out.println("Wayy: ");
         int way = scan.nextInt();
-        String[] times = arrival.split(":"); // разделите
+        String[] times = arrival.split(":"); // разделитель
         String time1 = times[0];
         String time2 = times[1];
 
@@ -36,9 +36,9 @@ public class Number1 {
             format22_time = "0" + format22_time;
         }
 
-        System.out.println("Форматы");
-        System.out.println(format11_time);
-        System.out.println(format22_time);
+        //System.out.println("Форматы");
+        //System.out.println(format11_time);
+        //System.out.println(format22_time);
 
         boolean minus_check_1 = format11_time.contains("-");
         boolean minus_check_2 = format22_time.contains("-");
@@ -49,7 +49,7 @@ public class Number1 {
         //int result1;
         // int result2;
 
-        System.out.println(format11_time);
+        System.out.println(format11_time); //вывод обычный
         System.out.println(format22_time);
 
         if ((minus_check_2) || (minus_check_1)) {
@@ -65,13 +65,13 @@ public class Number1 {
             if (way > 60){
                 resa1 = 24 + format11_time_int;
                 resa2 = format22_time_int;
-                System.out.println(resa1);
-                System.out.println(resa2);
+                //System.out.println(resa1);
+                //System.out.println(resa2);
             }
 
             System.out.println(result_format1);
             System.out.println(result_format2);
-            System.out.println(result_format);
+            //System.out.println(result_format);
         }
 
 
