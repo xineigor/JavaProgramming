@@ -6,23 +6,21 @@ public class Number1 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Enter arrival: "); //введите время прибытия
+        System.out.println("Enter arrival: "); //ввод данных
         String arrival = scan.nextLine();
-        System.out.println("Wayy: ");
+        System.out.println("Way: ");
         int way = scan.nextInt();
-        String[] times = arrival.split(":"); // разделитель
+
+        String[] times = arrival.split(":"); //формат вводных данных
         String time1 = times[0];
         String time2 = times[1];
-
         int time1_int = Integer.parseInt(time1);
         int time2_int = Integer.parseInt(time2);
 
-
+        //лперации с данными
         int time1_int_minuet = time1_int * 60; //перевод в минуты
         int sum_time = time1_int_minuet + time2_int; // время прибытия в минутах
         int time_way = sum_time - way; // время пути в минутах
-
-
         int format1_time = time_way / 60;
         int format2_time = time_way % 60;
 
@@ -40,7 +38,7 @@ public class Number1 {
         //System.out.println(format11_time);
         //System.out.println(format22_time);
 
-        boolean minus_check_1 = format11_time.contains("-");
+        boolean minus_check_1 = format11_time.contains("-"); //проверка выхождения за 00:00
         boolean minus_check_2 = format22_time.contains("-");
 
         int format11_time_int = Integer.parseInt(format11_time);
@@ -49,10 +47,10 @@ public class Number1 {
         //int result1;
         // int result2;
         if (!((minus_check_2) || (minus_check_1))) {
-            System.out.println(format11_time); //вывод обычный
+            System.out.println(format11_time); //вывод обычный без выхода за 00:00
             System.out.println(format22_time);
         }
-        if ((minus_check_2) || (minus_check_1)) {
+        if ((minus_check_2) || (minus_check_1)) { //перевод в минуты чтобы высчитать выход за 00:00
 
             int result_format = 1440 + format22_time_int;
             int format11_time_int_min = format11_time_int * 60;
@@ -60,16 +58,16 @@ public class Number1 {
 
             int result_format1 = result_format / 60;
             int result_format2 = result_format % 60;
-            int resa1;
-            int resa2;
-            if (way > 60){
-                resa1 = 24 + format11_time_int;
-                resa2 = format22_time_int;
+            //int resa1;
+            //int resa2;
+            //if (way > 60){
+                //resa1 = 24 + format11_time_int;
+                //resa2 = format22_time_int;
                 //System.out.println(resa1);
                 //System.out.println(resa2);
-            }
+            //}
 
-            System.out.println(result_format1);
+            System.out.println(result_format1); //вывод с выходом за 00:00
             System.out.println(result_format2);
             //System.out.println(result_format);
         }
