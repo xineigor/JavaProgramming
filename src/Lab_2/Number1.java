@@ -48,10 +48,10 @@ public class Number1 {
 
         //int result1;
         // int result2;
-
-        System.out.println(format11_time); //вывод обычный
-        System.out.println(format22_time);
-
+        if (!((minus_check_2) || (minus_check_1))) {
+            System.out.println(format11_time); //вывод обычный
+            System.out.println(format22_time);
+        }
         if ((minus_check_2) || (minus_check_1)) {
 
             int result_format = 1440 + format22_time_int;
