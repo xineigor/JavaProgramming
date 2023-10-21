@@ -47,8 +47,9 @@ public class Number1 {
         //int result1;
         // int result2;
         if (!((minus_check_2) || (minus_check_1))) {
-            System.out.println(format11_time); //вывод обычный без выхода за 00:00
-            System.out.println(format22_time);
+            System.out.println(format11_time+':'+format22_time); //вывод обычный без выхода за 00:00
+            //System.out.println(format11_time);
+            //System.out.println(format22_time);
         }
         if ((minus_check_2) || (minus_check_1)) { //перевод в минуты чтобы высчитать выход за 00:00
 
@@ -67,8 +68,9 @@ public class Number1 {
                 //System.out.println(resa2);
             //}
 
-            System.out.println(result_format1); //вывод с выходом за 00:00
-            System.out.println(result_format2);
+            System.out.println(result_format1+":"+result_format2); //вывод с выходом за 00:00
+            //System.out.println(result_format1);
+            //System.out.println(result_format2);
             //System.out.println(result_format);
         }
 
