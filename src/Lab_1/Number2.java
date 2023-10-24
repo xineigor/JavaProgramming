@@ -17,10 +17,19 @@ public class Number2 {
         int index1 = str_in.indexOf(ch1); //индекс нужных значений
         int index2 = str_in.indexOf(ch2);
 
+        int tmp;
+
+        if (index1 > index2){   //проверка на правильный порядок индексов
+            tmp = index1;
+            index1 = index2;
+            index2 = tmp;
+        }
+
         String ch1_upper_case = str_in.substring(index1, index1+1).toUpperCase(); //нужные значения по индексу в строку и перевод
         String ch2_upper_case = str_in.substring(index2, index2+1).toUpperCase();
 
-        String stroka_end = ch1_upper_case + stroka2 + ch2_upper_case;
+        String stroka = str_in.substring(index1+1, index2);
+        String stroka_end = ch1_upper_case + stroka + ch2_upper_case;
 
 //        String stroka1 = str_in.substring(0, index1);
 //        String stroka2 = str_in.substring(index1+1, index2);
