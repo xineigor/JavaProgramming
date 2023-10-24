@@ -31,30 +31,6 @@ public class Number2 {
         String stroka = str_in.substring(index1+1, index2);
         String stroka_end = ch1_upper_case + stroka + ch2_upper_case;
 
-//        String stroka1 = str_in.substring(0, index1);
-//        String stroka2 = str_in.substring(index1+1, index2);
-//        String stroka3 = str_in.substring(index2+1, index_end);
-//
-//        String stroka_end = stroka1 + ch1_upper_case + stroka2 + ch2_upper_case + stroka3;
-
-        //StringBuffer str_in_sb = new StringBuffer(str_in);
-        //str_in_sb.setCharAt(0, 'c');
-        //System.out.println(strBuffer.toString());
-
-//        StringBuffer str_buffer = new StringBuffer(str_in);  //решение через str buffer
-//
-//        str_buffer.delete(0,1);
-//        str_buffer.delete(3,4);
-//
-//        String result = new String(str_buffer);
-
-//        String result;                                          //решение через substring
-//        result = str_in.substring(1, str_in.length() - 1);
-
-
-//        System.out.println(ch1_upper_case);
-//        System.out.println(ch2_upper_case);
-
         System.out.println(stroka_end);
     }
 }
