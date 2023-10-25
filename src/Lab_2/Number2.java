@@ -26,7 +26,7 @@ public class Number2 {
         day_week = day_week.toLowerCase();  // перевод в нужный формат
 
         if ((!(day_week.equals("monday"))) && (!(day_week.equals("tuesday"))) && (!(day_week.equals("wednesday"))) && (!(day_week.equals("thursday"))) && (!(day_week.equals("friday"))) && (!(day_week.equals("saturday"))) && (!(day_week.equals("sunday")))){
-            System.out.println("DAy INVALID");
+            System.out.println("DAY INVALID");
             System.exit(0);
         }
 
@@ -79,6 +79,7 @@ public class Number2 {
                 break;
 
         }
-        System.out.println(Price);
+
+        System.out.printf("%.2f", Price);
     }
 }
