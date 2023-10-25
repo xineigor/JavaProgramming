@@ -17,7 +17,7 @@ public class Number2 {
         //if ((!(Fruit == "apple")) && (!(Fruit == "plum")) && (!(Fruit == "banana")) && (!(Fruit == "grapes")) && (!(Fruit == "orange")) && (!(Fruit == "kiwi")) && (!(Fruit == "mango"))){
         if ((!(Fruit.equals("apple"))) && (!(Fruit.equals("plum"))) && (!(Fruit.equals("banana"))) && (!(Fruit.equals("grapes"))) && (!(Fruit.equals("orange"))) && (!(Fruit.equals("kiwi"))) && (!(Fruit.equals("mango")))){
             System.out.println("FRUIT INVALID");
-            System.exit(0);
+            System.exit(0);      //проверки на правильность введения
         }
 
         System.out.println("Day of the week: ");
@@ -27,11 +27,22 @@ public class Number2 {
 
         if ((!(day_week.equals("monday"))) && (!(day_week.equals("tuesday"))) && (!(day_week.equals("wednesday"))) && (!(day_week.equals("thursday"))) && (!(day_week.equals("friday"))) && (!(day_week.equals("saturday"))) && (!(day_week.equals("sunday")))){
             System.out.println("DAY INVALID");
-            System.exit(0);
+            System.exit(0);      //проверки на правильность введения
         }
 
         System.out.println("Quantity kg: ");
-        float kg = scan.nextFloat();
+        String kg_str = scan.nextLine();
+
+        if (kg_str.matches("[a-zA-Z]+")){  // проверка на тип в кг
+            System.out.println("INVALID");
+            System.exit(0);
+        }
+
+        if (kg_str.contains(",")){    // формат точки и запятой
+            kg_str = kg_str.replace(",",".");
+        }
+
+        double kg = Double.parseDouble(kg_str);
 
         double Price = 0;
         boolean is_weekend;
