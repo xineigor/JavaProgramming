@@ -14,12 +14,21 @@ public class Number2 {
 
         Fruit = Fruit.toLowerCase();  //перевод в нужный формат
 
-        // проверка на фрукт сделать
+        //if ((!(Fruit == "apple")) && (!(Fruit == "plum")) && (!(Fruit == "banana")) && (!(Fruit == "grapes")) && (!(Fruit == "orange")) && (!(Fruit == "kiwi")) && (!(Fruit == "mango"))){
+        if ((!(Fruit.equals("apple"))) && (!(Fruit.equals("plum"))) && (!(Fruit.equals("banana"))) && (!(Fruit.equals("grapes"))) && (!(Fruit.equals("orange"))) && (!(Fruit.equals("kiwi"))) && (!(Fruit.equals("mango")))){
+            System.out.println("FRUIT INVALID");
+            System.exit(0);
+        }
 
         System.out.println("Day of the week: ");
         String day_week = scan.nextLine();
 
         day_week = day_week.toLowerCase();  // перевод в нужный формат
+
+        if ((!(day_week.equals("monday"))) && (!(day_week.equals("tuesday"))) && (!(day_week.equals("wednesday"))) && (!(day_week.equals("thursday"))) && (!(day_week.equals("friday"))) && (!(day_week.equals("saturday"))) && (!(day_week.equals("sunday")))){
+            System.out.println("DAy INVALID");
+            System.exit(0);
+        }
 
         System.out.println("Quantity kg: ");
         float kg = scan.nextFloat();
