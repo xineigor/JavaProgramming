@@ -15,7 +15,7 @@ public class Number2 {
         Fruit = Fruit.toLowerCase();  //перевод в нужный формат
 
         //if ((!(Fruit == "apple")) && (!(Fruit == "plum")) && (!(Fruit == "banana")) && (!(Fruit == "grapes")) && (!(Fruit == "orange")) && (!(Fruit == "kiwi")) && (!(Fruit == "mango"))){
-        if ((!(Fruit.equals("apple"))) && (!(Fruit.equals("plum"))) && (!(Fruit.equals("banana"))) && (!(Fruit.equals("grapes"))) && (!(Fruit.equals("orange"))) && (!(Fruit.equals("kiwi"))) && (!(Fruit.equals("mango")))){
+        if ((!(Fruit.equals("apple"))) && (!(Fruit.equals("plum"))) && (!(Fruit.equals("banana"))) && (!(Fruit.equals("grapes"))) && (!(Fruit.equals("orange"))) && (!(Fruit.equals("kiwi"))) && (!(Fruit.equals("mango")))) {
             System.out.println("FRUIT INVALID");
             System.exit(0);      //проверки на правильность введения
         }
@@ -25,7 +25,7 @@ public class Number2 {
 
         day_week = day_week.toLowerCase();  // перевод в нужный формат
 
-        if ((!(day_week.equals("monday"))) && (!(day_week.equals("tuesday"))) && (!(day_week.equals("wednesday"))) && (!(day_week.equals("thursday"))) && (!(day_week.equals("friday"))) && (!(day_week.equals("saturday"))) && (!(day_week.equals("sunday")))){
+        if ((!(day_week.equals("monday"))) && (!(day_week.equals("tuesday"))) && (!(day_week.equals("wednesday"))) && (!(day_week.equals("thursday"))) && (!(day_week.equals("friday"))) && (!(day_week.equals("saturday"))) && (!(day_week.equals("sunday")))) {
             System.out.println("DAY INVALID");
             System.exit(0);      //проверки на правильность введения
         }
@@ -33,13 +33,13 @@ public class Number2 {
         System.out.println("Quantity kg: ");
         String kg_str = scan.nextLine();
 
-        if (kg_str.matches("[a-zA-Z]+")){  // проверка на тип в кг
+        if (kg_str.matches("[a-zA-Z]+")) {  // проверка на тип в кг
             System.out.println("INVALID");
             System.exit(0);
         }
 
-        if (kg_str.contains(",")){    // формат точки и запятой
-            kg_str = kg_str.replace(",",".");
+        if (kg_str.contains(",")) {    // формат точки и запятой
+            kg_str = kg_str.replace(",", ".");
         }
 
         double kg = Double.parseDouble(kg_str);
@@ -47,48 +47,27 @@ public class Number2 {
         double Price = 0;
         boolean is_weekend;
 
-        if ((day_week.equals("saturday")) || (day_week.equals("sunday"))) {
-            is_weekend = true;
-        } else {
-            is_weekend = false;
-        }
+        is_weekend = (day_week.equals("saturday")) || (day_week.equals("sunday"));
 
         switch (Fruit) {
-            case ("apple"):
-                Price = 9.55 * 100 * kg;
-                break;
-            case ("plum"):
-                Price = 10.98 * 100 * kg;
-                break;
-            case ("banana"):
+            case ("apple") -> Price = 9.55 * 100 * kg;
+            case ("plum") -> Price = 10.98 * 100 * kg;
+            case ("banana") -> {
                 Price = 11.49 * 100 * kg;
-
-                if (is_weekend){
+                if (is_weekend) {
                     Price = Price * 0.91;
                 }
-
-                break;
-            case ("grapes"):
+            }
+            case ("grapes") -> {
                 Price = 15.99 * 100 * kg;
-
-                if (!(is_weekend)){
+                if (!(is_weekend)) {
                     Price = Price * 0.91;
                 }
-
-                break;
-            case ("orange"):
-                Price = 17.99 * 100 * kg;
-                break;
-            case ("kiwi"):
-                Price = 37.99 * 100 * kg;
-                break;
-            case ("mango"):
-                Price = 39.99 * 100 * kg;
-                break;
-            default:
-                System.out.println("NO");
-                break;
-
+            }
+            case ("orange") -> Price = 17.99 * 100 * kg;
+            case ("kiwi") -> Price = 37.99 * 100 * kg;
+            case ("mango") -> Price = 39.99 * 100 * kg;
+            default -> System.out.println("NO");
         }
 
         System.out.printf("%.2f", Price);
