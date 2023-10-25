@@ -8,13 +8,16 @@ public class Number1 {
 
         System.out.println("Enter arrival in format ##:## : "); //ввод данных
         String arrival = scan.nextLine();
-        if (!(arrival.contains(":"))){  //проверка данных
+
+        if (!(arrival.contains(":"))) {  //проверка данных
             System.out.println("FORMAT ERROR");
             System.exit(0);
         }
+
         System.out.println("Enter way in min: ");
         String way1 = scan.nextLine();
-        if (way1.matches("[a-zA-Z]+")){  //проверка данных
+
+        if (way1.matches("[a-zA-Z]+")) {  //проверка данных
             System.out.println("FORMAT ERROR");
             System.exit(0);
         }
@@ -49,10 +52,10 @@ public class Number1 {
         int format11_time_int = Integer.parseInt(format11_time);
         int format22_time_int = Integer.parseInt(format22_time);
 
-
         if (!((minus_check_2) || (minus_check_1))) {
-            System.out.println(format11_time+':'+format22_time); //вывод обычный без выхода за 00:00
+            System.out.println(format11_time + ':' + format22_time); //вывод обычный без выхода за 00:00
         }
+
         if ((minus_check_2) || (minus_check_1)) { //перевод в минуты чтобы высчитать выход за 00:00
 
             int result_format = 1440 + format22_time_int;
@@ -61,7 +64,7 @@ public class Number1 {
             int result_format1 = result_format / 60;
             int result_format2 = result_format % 60;
 
-            System.out.println(result_format1+":"+result_format2); //вывод с выходом за 00:00
+            System.out.println(result_format1 + ":" + result_format2); //вывод с выходом за 00:00
         }
 
 

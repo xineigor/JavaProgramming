@@ -7,7 +7,7 @@ public class Number2 {
         Scanner scan = new Scanner(System.in);
         char symbol = scan.next().charAt(0);
 
-        System.out.println(symbol+17);
+        System.out.println(symbol + 17);
         scan.close();
     }
 }

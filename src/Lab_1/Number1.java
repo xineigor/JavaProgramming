@@ -12,8 +12,7 @@ public class Number1 {
         System.out.println("Enter b:");
         double b = scan.nextInt();
 
-        double res = ((17 + 2) / Math.sqrt(a*b)) - (Math.abs((a - 17) / (2 * b)));
-
+        double res = ((17 + 2) / Math.sqrt(a * b)) - (Math.abs((a - 17) / (2 * b)));
         double res_round = Math.round(res * 100.0) / 100.0;
 
         System.out.println(res_round);
