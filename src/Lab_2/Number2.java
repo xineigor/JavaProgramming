@@ -2,6 +2,7 @@ package Lab_2;
 
 import com.sun.security.jgss.GSSUtil;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Number2 {
@@ -11,8 +12,14 @@ public class Number2 {
         System.out.println("Fruit :");
         String Fruit = scan.nextLine();
 
+        Fruit = Fruit.toLowerCase();  //перевод в нужный формат
+
+        // проверка на фрукт сделать
+
         System.out.println("Day of the week: ");
         String day_week = scan.nextLine();
+
+        day_week = day_week.toLowerCase();  // перевод в нужный формат
 
         System.out.println("Quantity kg: ");
         float kg = scan.nextFloat();
@@ -20,7 +27,7 @@ public class Number2 {
         double Price = 0;
         boolean is_weekend;
 
-        if ((day_week.equals("Saturday")) || (day_week.equals("Sunday"))) {
+        if ((day_week.equals("saturday")) || (day_week.equals("sunday"))) {
             is_weekend = true;
         } else {
             is_weekend = false;
