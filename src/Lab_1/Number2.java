@@ -9,8 +9,6 @@ public class Number2 {
         System.out.println("Enter String: ");
         String str_in = scan.nextLine();
 
-        int index_end = str_in.length(); //длинна
-
         String ch1 = scan.nextLine();  //считывание значений
         String ch2 = scan.nextLine();
 

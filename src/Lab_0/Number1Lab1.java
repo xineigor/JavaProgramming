@@ -2,7 +2,7 @@ package Lab_0;
 
 import java.util.Scanner;
 
-public class Number1 {
+public class Number1Lab1 {
     public static void main(String[] args) {
         double cost = 123.45 * 17;
         double discount = 0.95;

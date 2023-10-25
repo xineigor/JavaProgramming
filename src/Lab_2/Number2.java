@@ -1,8 +1,5 @@
 package Lab_2;
 
-import com.sun.security.jgss.GSSUtil;
-
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Number2 {
