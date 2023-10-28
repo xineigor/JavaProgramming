@@ -2,7 +2,7 @@ package Lab_3;
 
 import java.util.Scanner;
 
-public class Number0 {
+public class Number0_1 {
     public static void main(String[] args) {
         int sum = 0;
         Scanner scan = new Scanner(System.in);

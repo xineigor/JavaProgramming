@@ -1,8 +1,8 @@
-package Lab_0;
+package Lab_1;
 
 import java.util.Scanner;
 
-public class Lab1Number2 {
+public class Number0_2 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         char symbol = scan.next().charAt(0);
