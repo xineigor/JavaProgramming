@@ -9,7 +9,7 @@ public class Numbernullsecond {
 
         int pow = 0;
         int power = 1;
-        while (limit >= power * 2){
+        while (limit > power * 2){
             power *= 2;
             pow += 1;
         }

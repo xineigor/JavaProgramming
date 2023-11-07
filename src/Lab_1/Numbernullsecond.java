@@ -7,7 +7,7 @@ public class Numbernullsecond {
         Scanner scan = new Scanner(System.in);
         char symbol = scan.next().charAt(0);
 
-        System.out.println(symbol + 17);
+        System.out.println(symbol + 17); // todo вывод сивола а не кода
         scan.close();
     }
 }

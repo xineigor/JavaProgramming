@@ -19,8 +19,7 @@ public class Numberone {
 
         if (way1.matches("[a-zA-Z]+")) {  //проверка данных
             System.out.println("FORMAT ERROR");
-            System.exit(0);
-        }
+        } else {
 
         int way = Integer.parseInt(way1);
         String[] times = arrival.split(":"); //формат вводных данных
@@ -65,7 +64,7 @@ public class Numberone {
             int result_format2 = result_format % 60;
 
             System.out.println(result_format1 + ":" + result_format2); //вывод с выходом за 00:00
-        }
+        }}
 
 
     }
