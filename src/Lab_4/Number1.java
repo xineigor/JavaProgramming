@@ -1,6 +1,5 @@
 package Lab_4;
 
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Number1 {
