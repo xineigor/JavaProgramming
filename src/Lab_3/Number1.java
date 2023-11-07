@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class Number1 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int x = scan.nextInt();
-        while (!((x >= -500) && (x <= 100) || (x >= 500) && (x <= 1000))){
+        int number = scan.nextInt();
+        while (!((number >= -500) && (number <= 100) || (number >= 500) && (number <= 1000))){
             System.out.println("Not_yet");
-            x = scan.nextInt();
+            number = scan.nextInt();
         }
 
-        System.out.println("Correct_number_" + x);
+        System.out.println("Correct_number_" + number);
     }
 }

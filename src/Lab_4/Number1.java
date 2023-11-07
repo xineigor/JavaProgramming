@@ -1,51 +1,64 @@
 package Lab_4;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Number1 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        int inn = 0;
-        boolean is_simple;
-        int del_count = 0;
-        int i = 1;
-        //del_count = 0;
+        int del_amount = 0;
+        int div_number = 1;
         int all_sum = 0;
         int all_mult = 0;
 
-        while (true){
-            inn = scan.nextInt();
+        while (true) {
+            String inn_str = scan.nextLine();
+            inn_str = inn_str.toLowerCase();  //формат ignore caps
 
-            if (inn == 0){
-                break;
-
+            if (inn_str.equals("0") || inn_str.equals("1") || inn_str.contains("-") || inn_str.contains("17")) {
+                System.out.println("invalid");
+                continue;
             }
 
-            while (true){
-                if (inn % i == 0){
-                    del_count += 1;
+            if (inn_str.equals("stop")) {
+                break;
+            }
+
+            int inn = Integer.parseInt(inn_str);
+
+            while (true) {  //перебор делителей
+                if (inn % div_number == 0) {
+                    del_amount += 1;
                 }
 
-                i++;
+                div_number++;
 
-                if (i > inn){
-                    if (del_count == 2){
+                if (div_number > inn) {
+                    if (del_amount == 2) {  //при выходе из цикла по кол-ву делителей определяем в какую группу определить число
                         all_sum += inn;
                     }
-                    if (del_count > 2) {
+                    if (del_amount > 2) {
                         all_mult += inn;
                     }
 
-                    del_count = 0;
+                    del_amount = 0;
                     break;
                 }
 
             }
-            //break;
         }
 
-        System.out.println(all_sum);
-        System.out.println(all_mult);
+        if (all_sum == 0) {    //формат вывод
+            System.out.println("prime_undefined");
+        } else {
+            System.out.println("prime_" + all_sum);
+        }
+
+        if (all_mult == 0) {
+            System.out.println("non_prime_undefined");
+        } else {
+            System.out.println("non_prime_" + all_mult);
+        }
     }
 }
