@@ -2,7 +2,7 @@ package Lab_3;
 
 import java.util.Scanner;
 
-public class Numbertwo {
+public class NumberTwo {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int amount_numbers_in = Integer.parseInt(scan.nextLine());

@@ -2,7 +2,7 @@ package Lab_1;
 
 import java.util.Scanner;
 
-public class Numbernullfirt {
+public class NumberNullFirst {
     public static void main(String[] args) {
         double cost = 123.45 * 17;
         double discount = 0.95;
