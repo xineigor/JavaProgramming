@@ -2,7 +2,7 @@ package Lab_3;
 
 import java.util.Scanner;
 
-public class Number0_2 {
+public class Numbernullsecond {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int limit = Integer.parseInt(scan.nextLine());
