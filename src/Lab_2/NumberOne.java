@@ -22,7 +22,7 @@ public class NumberOne {
         } else {
 
         int way = Integer.parseInt(way1);
-        String[] times = arrival.split(":"); //формат вводных данных
+        String[] times = arrival.split(":"); //формат вводных данных  //возврат массива сплитом
         String time1 = times[0];
         String time2 = times[1];
         int time1_int = Integer.parseInt(time1);

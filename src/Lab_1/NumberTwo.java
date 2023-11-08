@@ -9,7 +9,7 @@ public class NumberTwo {
         System.out.println("Enter String: ");
         String str_in = scan.nextLine();
 
-        String ch1 = scan.nextLine();  //считывание значений // todo char дложен
+        String ch1 = scan.nextLine();  //считывание значений // todo char дложен +
         String ch2 = scan.nextLine();
 
         int index1 = str_in.indexOf(ch1); //индекс нужных значений
