@@ -13,6 +13,6 @@ public class NumberNullFirst {
         double result = cost * passengers;
         result *= discount;
         System.out.printf("%.2f", result);
-        scan.close();
+
     }
 }
