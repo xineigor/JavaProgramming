@@ -45,7 +45,7 @@ public class NumberOneDo {
                     break;
                 }
 
-            } while (true);
+            } while (true);  // надо бы рекурсию
         } while (true);
 
         if (allSum == 0) {    //формат вывод
