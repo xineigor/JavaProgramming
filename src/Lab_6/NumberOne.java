@@ -14,7 +14,9 @@ public class NumberOne {
             nothingLine = nothingLine + noFormatArray.charAt(i);
 
             if (noFormatArray.charAt(i) == ' ') {
+                nothingLine = nothingLine.substring(0,nothingLine.length() - 1);
                 list.add(nothingLine);
+                System.out.println(nothingLine);
                 nothingLine = "";
             }
         }
@@ -26,11 +28,14 @@ public class NumberOne {
             sum += Integer.parseInt(ln);
         }
 
-        ArrayList<String> listShifted = list;
+        System.out.println(sum);
+        System.out.println(amount);
+
+        //ArrayList<String> listShifted = list;
 
         while (sum > 0) {
-            listShifted.add(list.get(0));
-            listShifted.remove(0);
+            list.add(list.get(0));
+            list.remove(0);
             sum--;
         }
 
