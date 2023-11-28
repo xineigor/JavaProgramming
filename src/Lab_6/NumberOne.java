@@ -10,13 +10,19 @@ public class NumberOne {
         Scanner scan = new Scanner(System.in);
         String noFormatArray = scan.nextLine();
 
+        String endCh = String.valueOf(noFormatArray.charAt(noFormatArray.length()-1));
+
+        if (!(endCh.equals(" "))) {
+            noFormatArray = noFormatArray + " ";
+        }
+
         for (int i = 0; i < noFormatArray.length(); i++){
             nothingLine = nothingLine + noFormatArray.charAt(i);
 
             if (noFormatArray.charAt(i) == ' ') {
                 nothingLine = nothingLine.substring(0,nothingLine.length() - 1);
                 list.add(nothingLine);
-                System.out.println(nothingLine);
+                //System.out.println(nothingLine);
                 nothingLine = "";
             }
         }
