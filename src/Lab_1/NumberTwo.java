@@ -7,28 +7,28 @@ public class NumberTwo {
 
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter String: ");
-        String str_in = scan.nextLine();
+        String strIn = scan.nextLine();
 
-        String ch1 = scan.nextLine();  //считывание значений // todo char дложен +
-        String ch2 = scan.nextLine();
+        String chOne = scan.nextLine();  //считывание значений // todo char дложен +
+        String chTwo = scan.nextLine();
 
-        int index1 = str_in.indexOf(ch1); //индекс нужных значений
-        int index2 = str_in.indexOf(ch2);
+        int indexOne = strIn.indexOf(chOne); //индекс нужных значений
+        int indexTwo = strIn.indexOf(chTwo);
 
         int tmp;
 
-        if (index1 > index2) {   //проверка на правильный порядок индексов
-            tmp = index1;
-            index1 = index2;
-            index2 = tmp;
+        if (indexOne > indexTwo) {   //проверка на правильный порядок индексов
+            tmp = indexOne;
+            indexOne = indexTwo;
+            indexTwo = tmp;
         }
 
-        String ch1_upper_case = str_in.substring(index1, index1 + 1).toUpperCase(); //нужные значения по индексу в строку и перевод
-        String ch2_upper_case = str_in.substring(index2, index2 + 1).toUpperCase();
+        String chOneUpperCase = strIn.substring(indexOne, indexOne + 1).toUpperCase(); //нужные значения по индексу в строку и перевод
+        String chTwoUpperCase = strIn.substring(indexTwo, indexTwo + 1).toUpperCase();
 
-        String stroka = str_in.substring(index1 + 1, index2);  //обрезка строки по конечным буквам
-        String stroka_end = ch1_upper_case + stroka + ch2_upper_case;
+        String line = strIn.substring(indexOne + 1, indexTwo);  //обрезка строки по конечным буквам
+        String lineEnd = chOneUpperCase + line + chTwoUpperCase;
 
-        System.out.println(stroka_end);
+        System.out.println(lineEnd);
     }
 }

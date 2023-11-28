@@ -15,55 +15,55 @@ public class NumberOne {
         }
 
         System.out.println("Enter way in min: ");
-        String way1 = scan.nextLine();
+        String wayOne = scan.nextLine();
 
-        if (way1.matches("[a-zA-Z]+")) {  //проверка данных
+        if (wayOne.matches("[a-zA-Z]+")) {  //проверка данных
             System.out.println("FORMAT ERROR");
         } else {
 
-        int way = Integer.parseInt(way1);
+        int way = Integer.parseInt(wayOne);
         String[] times = arrival.split(":"); //формат вводных данных  //возврат массива сплитом
-        String time1 = times[0];
-        String time2 = times[1];
-        int time1_int = Integer.parseInt(time1);
-        int time2_int = Integer.parseInt(time2);
+        String timeOne = times[0];
+        String timeTwo = times[1];
+        int timeOneInt = Integer.parseInt(timeOne);
+        int timeTwoInt = Integer.parseInt(timeTwo);
 
         //операции с данными
-        int time1_int_minuet = time1_int * 60; //перевод в минуты
-        int sum_time = time1_int_minuet + time2_int; // время прибытия в минутах
-        int time_way = sum_time - way; // время пути в минутах
-        int format1_time = time_way / 60;
-        int format2_time = time_way % 60;
+        int time1_int_minuet = timeOneInt * 60; //перевод в минуты
+        int sumTime = time1_int_minuet + timeTwoInt; // время прибытия в минутах
+        int timeWay = sumTime - way; // время пути в минутах
+        int formatOneTime = timeWay / 60;
+        int formatTwoTime = timeWay % 60;
 
-        String format11_time = String.valueOf(format1_time); // перевод в нужный формат
-        if (format11_time.length() == 1) {
-            format11_time = "0" + format11_time;
+        String formatOneOneTime = String.valueOf(formatOneTime); // перевод в нужный формат
+        if (formatOneOneTime.length() == 1) {
+            formatOneOneTime = "0" + formatOneOneTime;
         }
 
-        String format22_time = String.valueOf(format2_time); // перевод в нужный формат
-        if (format22_time.length() == 1) {
-            format22_time = "0" + format22_time;
+        String formatTwoTwoTime = String.valueOf(formatTwoTime); // перевод в нужный формат
+        if (formatTwoTwoTime.length() == 1) {
+            formatTwoTwoTime = "0" + formatTwoTwoTime;
         }
 
-        boolean minus_check_1 = format11_time.contains("-"); //проверка выхождения за 00:00
-        boolean minus_check_2 = format22_time.contains("-");
+        boolean minus_check_1 = formatOneOneTime.contains("-"); //проверка выхождения за 00:00
+        boolean minusCheckTwo = formatTwoTwoTime.contains("-");
 
-        int format11_time_int = Integer.parseInt(format11_time);
-        int format22_time_int = Integer.parseInt(format22_time);
+        int formatOneOneTimeInt = Integer.parseInt(formatOneOneTime);
+        int format22_time_int = Integer.parseInt(formatTwoTwoTime);
 
-        if (!((minus_check_2) || (minus_check_1))) {
-            System.out.println(format11_time + ':' + format22_time); //вывод обычный без выхода за 00:00
+        if (!((minusCheckTwo) || (minus_check_1))) {
+            System.out.println(formatOneOneTime + ':' + formatTwoTwoTime); //вывод обычный без выхода за 00:00
         }
 
-        if ((minus_check_2) || (minus_check_1)) { //перевод в минуты чтобы высчитать выход за 00:00
+        if ((minusCheckTwo) || (minus_check_1)) { //перевод в минуты чтобы высчитать выход за 00:00
 
-            int result_format = 1440 + format22_time_int;
-            int format11_time_int_min = format11_time_int * 60;
-            result_format = result_format + format11_time_int_min;
-            int result_format1 = result_format / 60;
-            int result_format2 = result_format % 60;
+            int resultFormat = 1440 + format22_time_int;
+            int formatOneOneTimeIntMin = formatOneOneTimeInt * 60;
+            resultFormat = resultFormat + formatOneOneTimeIntMin;
+            int resultFormatOne = resultFormat / 60;
+            int resultFormatTwo = resultFormat % 60;
 
-            System.out.println(result_format1 + ":" + result_format2); //вывод с выходом за 00:00
+            System.out.println(resultFormatOne + ":" + resultFormatTwo); //вывод с выходом за 00:00
         }}
 
 

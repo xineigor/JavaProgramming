@@ -17,45 +17,45 @@ public class NumberTwo {
         }
 
         System.out.println("Day of the week: ");
-        String day_week = scan.nextLine();
+        String dayWeek = scan.nextLine();
 
-        day_week = day_week.toLowerCase();  // перевод в нужный формат
+        dayWeek = dayWeek.toLowerCase();  // перевод в нужный формат
 
-        if ((!(day_week.equals("monday"))) && (!(day_week.equals("tuesday"))) && (!(day_week.equals("wednesday"))) && (!(day_week.equals("thursday"))) && (!(day_week.equals("friday"))) && (!(day_week.equals("saturday"))) && (!(day_week.equals("sunday")))) {
+        if ((!(dayWeek.equals("monday"))) && (!(dayWeek.equals("tuesday"))) && (!(dayWeek.equals("wednesday"))) && (!(dayWeek.equals("thursday"))) && (!(dayWeek.equals("friday"))) && (!(dayWeek.equals("saturday"))) && (!(dayWeek.equals("sunday")))) {
             System.out.println("DAY INVALID");
             System.exit(0);      //проверки на правильность введения
         }
 
         System.out.println("Quantity kg float: ");
-        String kg_str = scan.nextLine();
+        String kgStr = scan.nextLine();
 
-        if ((kg_str.matches("[a-zA-Z]+")) || (!(kg_str.contains(",")) && !(kg_str.contains(".")))) {  // проверка на тип в кг
+        if ((kgStr.matches("[a-zA-Z]+")) || (!(kgStr.contains(",")) && !(kgStr.contains(".")))) {  // проверка на тип в кг
             System.out.println("INVALID");
             System.exit(0);
         }
 
-        if (kg_str.contains(",")) {    // формат точки и запятой
-            kg_str = kg_str.replace(",", ".");
+        if (kgStr.contains(",")) {    // формат точки и запятой
+            kgStr = kgStr.replace(",", ".");
         }
 
-        double kg = Double.parseDouble(kg_str);
+        double kg = Double.parseDouble(kgStr);
         double Price = 0;
-        boolean is_weekend;
+        boolean isWeekend;
 
-        is_weekend = (day_week.equals("saturday")) || (day_week.equals("sunday")); //проверка на день недели
+        isWeekend = (dayWeek.equals("saturday")) || (dayWeek.equals("sunday")); //проверка на день недели
 
         switch (Fruit) {                                    //логика
             case ("apple") -> Price = 9.55 * 100 * kg;
             case ("plum") -> Price = 10.98 * 100 * kg;
             case ("banana") -> {
                 Price = 11.49 * 100 * kg;
-                if (is_weekend) {
+                if (isWeekend) {
                     Price = Price * 0.91;
                 }
             }
             case ("grapes") -> {
                 Price = 15.99 * 100 * kg;
-                if (!(is_weekend)) {
+                if (!(isWeekend)) {
                     Price = Price * 0.91;
                 }
             }

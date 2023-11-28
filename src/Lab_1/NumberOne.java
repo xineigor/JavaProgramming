@@ -13,9 +13,9 @@ public class NumberOne {
         double b = scan.nextInt();
 
         double res = ((17 + 2) / Math.sqrt(a * b)) - (Math.abs((a - 17) / (2 * b)));
-        double res_round = Math.round(res * 100.0) / 100.0;
+        double resRound = Math.round(res * 100.0) / 100.0;
 
-        System.out.println(res_round);
+        System.out.println(resRound);
 
     }
 }

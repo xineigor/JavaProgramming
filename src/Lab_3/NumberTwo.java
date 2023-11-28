@@ -5,19 +5,19 @@ import java.util.Scanner;
 public class NumberTwo {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int amount_numbers_in = Integer.parseInt(scan.nextLine());
+        int amountNumbersIn = Integer.parseInt(scan.nextLine());
 
-        int number_max = 0;
-        int number_amount = 0;
+        int numberMax = 0;
+        int numberAmount = 0;
 
-        while (number_amount < amount_numbers_in) {
-            int in_number = scan.nextInt();
-            number_amount++;
-            if ((in_number > number_max) && (in_number % 3 == 0)) {
-                number_max = in_number;
+        while (numberAmount < amountNumbersIn) {
+            int inNumber = scan.nextInt();
+            numberAmount++;
+            if ((inNumber > numberMax) && (inNumber % 3 == 0)) {
+                numberMax = inNumber;
             }
         }
 
-        System.out.println(number_max);
+        System.out.println(numberMax);
     }
 }

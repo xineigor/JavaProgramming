@@ -6,20 +6,20 @@ public class NumberTwoChar {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int tmp = 0;
-        String line1 = scan.nextLine();
-        char ch1 = scan.next().charAt(0);
-        char ch2 = scan.next().charAt(0);
+        String lineOne = scan.nextLine();
+        char chOne = scan.next().charAt(0);
+        char chTwo = scan.next().charAt(0);
 
-        int index1 = line1.indexOf(ch1);
-        int index2 = line1.indexOf(ch2);
+        int indexOne = lineOne.indexOf(chOne);
+        int indexTwo = lineOne.indexOf(chTwo);
 
-        if (index1 > index2) {   //проверка на правильный порядок индексов
-            tmp = index1;
-            index1 = index2;
-            index2 = tmp;
+        if (indexOne > indexTwo) {   //проверка на правильный порядок индексов
+            tmp = indexOne;
+            indexOne = indexTwo;
+            indexTwo = tmp;
         }
 
-        String line2 = line1.substring(index1, index2 + 1).toUpperCase();
-        System.out.println(line2);
+        String lineTwo = lineOne.substring(indexOne, indexTwo + 1).toUpperCase();
+        System.out.println(lineTwo);
     }
 }
