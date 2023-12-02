@@ -9,11 +9,10 @@ public class NumberTwo {
         String firstLine = scan.nextLine();
         String secondLine = scan.nextLine();
         int k = 0;
-        int kk = 0;
         String[] firstLineSplit = firstLine.split(" ");
         String[] secondLineSplit = secondLine.split(" ");
 
-        double pow = Math.pow((double) firstLineSplit.length, (double) secondLineSplit.length); //размер массива максимум совподений
+        double pow = Math.pow(firstLineSplit.length, secondLineSplit.length); //размер массива максимум совподений
 
         String[] suitableNumbers = new String[(int)pow];
 
