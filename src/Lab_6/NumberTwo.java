@@ -12,7 +12,9 @@ public class NumberTwo {
         String[] firstLineSplit = firstLine.split(" ");
         String[] secondLineSplit = secondLine.split(" ");
 
-        double pow = Math.pow(firstLineSplit.length, secondLineSplit.length); //размер массива максимум совподений
+        //double pow = Math.pow(firstLineSplit.length, secondLineSplit.length); //размер массива максимум совподений
+
+        double pow = firstLineSplit.length * secondLineSplit.length * 2;
 
         String[] suitableNumbers = new String[(int)pow];
 

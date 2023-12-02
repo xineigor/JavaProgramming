@@ -1,4 +1,4 @@
-package Lab_5;
+package Lab_5; //Вариант 6
 
 import java.util.Scanner;
 
