@@ -7,15 +7,18 @@ public class NumberOne {
 
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter a:");
-        double a = scan.nextInt();
+        double a = Double.parseDouble(scan.nextLine());
 
         System.out.println("Enter b:");
-        double b = scan.nextInt();
+        double b = Double.parseDouble(scan.nextLine());
 
-        double res = ((17 + 2) / Math.sqrt(a * b)) - (Math.abs((a - 17) / (2 * b)));
-        double resRound = Math.round(res * 100.0) / 100.0;
+        System.out.println("Enter Option: ");
+        double option = Double.parseDouble(scan.nextLine());
 
-        System.out.println(resRound);
+        double res = ((option + 2) / Math.sqrt(a * b)) - (Math.abs((a - option) / (2 * b)));
+        //double resRound = Math.round(res * 100.0) / 100.0;
+
+        System.out.printf("%.2f", res);
 
     }
 }

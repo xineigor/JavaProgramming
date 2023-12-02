@@ -11,13 +11,15 @@ public class NumberTwo {
         int numberAmount = 0;
 
         while (numberAmount < amountNumbersIn) {
-            int inNumber = scan.nextInt();
+            int inNumber = Integer.parseInt(scan.nextLine());
             numberAmount++;
             if ((inNumber > numberMax) && (inNumber % 3 == 0)) {
                 numberMax = inNumber;
             }
         }
 
-        System.out.println(numberMax);
+        if (!(numberMax == 0)) {
+            System.out.println(numberMax);
+        } else System.out.println("undefined");
     }
 }
