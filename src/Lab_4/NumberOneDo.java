@@ -9,7 +9,7 @@ public class NumberOneDo {
         int delAmount = 0;
         int divNumber = 1;
         int allSum = 0;
-        int allMult = 0;
+        int allMult = 1;
 
         do {
             String innStr = scan.nextLine();
@@ -38,7 +38,7 @@ public class NumberOneDo {
                         allSum += inn;
                     }
                     if (delAmount > 2) {
-                        allMult += inn;
+                        allMult *= inn;
                     }
 
                     delAmount = 0;
