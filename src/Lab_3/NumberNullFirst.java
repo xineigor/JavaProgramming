@@ -11,7 +11,7 @@ public class NumberNullFirst {
         do {
             sum += enter;
             enter = Integer.parseInt(scan.nextLine());
-        } while (enter <= 17);
+        } while (enter <= 17 && enter > 0);
         System.out.println(sum);  //суммировать только положительные
     }
 }

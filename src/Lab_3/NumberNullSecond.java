@@ -14,7 +14,6 @@ public class NumberNullSecond {
             pow += 1;
         }
 
-
         System.out.println(power + " " + pow);
     }
 }
