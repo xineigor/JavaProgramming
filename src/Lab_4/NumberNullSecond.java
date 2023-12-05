@@ -24,10 +24,15 @@ public class NumberNullSecond {
 
         for (long k = 2; k <= 17; k++) {
             fc = fc * k;
-            System.out.println(fc);
+            //System.out.println(fc);
         }
 
-        System.out.println(fc);
+        if (17 >= start){
+            if (17 <= finish){
+                System.out.println(fc);
+            }
+        }
+
         System.out.println(sum);
     }
 }

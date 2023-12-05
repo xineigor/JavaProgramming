@@ -7,7 +7,7 @@ public class NumberNullFirst {
         int sum = 0;
         Scanner scan = new Scanner(System.in);
         int start = Integer.parseInt(scan.next());
-        int finish = Integer.parseInt(scan.next());
+        int finish = Integer.parseInt(scan.next());  // 10 15
 
         for (int i = start; i <= finish; i++ ) {
             if (i % 3 == 0) continue;

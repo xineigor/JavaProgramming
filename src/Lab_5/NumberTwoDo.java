@@ -19,34 +19,24 @@ public class NumberTwoDo {
     public static int minimum(String text) {
         int index = text.indexOf(' ');
 
-        //System.out.println(index);
-
         if (index == -1) {
             return min;
         }
 
         String strOne = text.substring(0, index);
 
-//        if (!(strOne.matches("[0-9]"))){
-//            if (!(strOne.contains("-"))){
-//                String textNext = text.substring(index + 1);
-//                return minimum(textNext);
-//            }
-//        }
-
-        if (  !(strOne.matches("[0-9]")) ||(  (strOne.contains("-")) &&  !(strOne.matches("[0-9]")))) {
-
-            String textNext = text.substring(index + 1);
-            return minimum(textNext);
-
+        if (!(strOne.matches("[0-9]"))){
+            if (!(strOne.contains("-"))){
+                String textNext = text.substring(index + 1);
+                return minimum(textNext);
+            }
         }
+
 
         if (Integer.parseInt(strOne) < min) {
             min = Integer.parseInt(strOne);
         }
 
-
-        //return minimum(text.substring(index + 1));
         String textNext = text.substring(index + 1);
         return minimum(textNext);
 
