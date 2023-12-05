@@ -1,13 +1,12 @@
-package Lab_0;
+package Lab_1;
 
 import java.util.Scanner;
 
-public class Number2 {
+public class NumberNullSecond {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         char symbol = scan.next().charAt(0);
-
-        System.out.println(symbol + 17);
-        scan.close();
+        symbol += 17;
+        System.out.println(symbol);
     }
 }

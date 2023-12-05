@@ -1,8 +1,8 @@
-package Lab_0;
+package Lab_1;
 
 import java.util.Scanner;
 
-public class Number1 {
+public class NumberNullFirst {
     public static void main(String[] args) {
         double cost = 123.45 * 17;
         double discount = 0.95;
@@ -13,6 +13,6 @@ public class Number1 {
         double result = cost * passengers;
         result *= discount;
         System.out.printf("%.2f", result);
-        scan.close();
+
     }
 }
