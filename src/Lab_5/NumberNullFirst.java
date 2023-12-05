@@ -3,7 +3,7 @@ package Lab_5;
 import java.util.Scanner;
 
 public class NumberNullFirst {
-    public static void main(String[] args) {
+    public static void main(String[] args) { //
         Scanner scan = new Scanner(System.in);
         voice(scan.nextInt());
     }
