@@ -6,28 +6,18 @@ public class NumberOneDod {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
-
         int minPrime = Integer.MAX_VALUE;
-
         int PrimeMult = 1;
-
         boolean check = true;
 
         while (check) {
             String xStr = scan.nextLine().toLowerCase();
 
-            if (xStr.equals("stop")) {
-                break;
-            }
+            if (xStr.equals("stop")) break;
 
-            if (!(xStr.matches("[0-9]+"))) {
-                //System.out.println("invalid");
-                continue;
-            }
+            if (!(xStr.matches("[0-9]+"))) continue;
 
-            if (xStr.equals("0") || xStr.equals("1") || xStr.contains("-") || xStr.contains("17")) {
-                continue;
-            }
+            if (xStr.equals("0") || xStr.equals("1") || xStr.contains("-") || xStr.contains("17")) continue;
 
             int x = Integer.parseInt(xStr);
 
@@ -36,7 +26,6 @@ public class NumberOneDod {
                     minPrime = x;
                 }
             }
-
             if (!(prime(x))) {
                 PrimeMult = PrimeMult * x;
             }
@@ -63,7 +52,6 @@ public class NumberOneDod {
                 dc += 1;
             }
         }
-
         return dc <= 2;
     }
 }

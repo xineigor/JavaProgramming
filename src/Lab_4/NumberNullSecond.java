@@ -24,7 +24,7 @@ public class NumberNullSecond {
 
         for (long k = 2; k <= 17; k++) {
             fc = fc * k;
-            //System.out.println(fc);
+
         }
 
         if (17 >= start){
