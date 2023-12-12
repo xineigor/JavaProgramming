@@ -36,7 +36,7 @@ public class NumberTwoDo {
         String[] sets = set.split(" ");
 
         for (String x : sets) {
-            System.out.print(x + " ");
+            System.out.print(x + " "); //todo пробел в конце
         }
 
     }

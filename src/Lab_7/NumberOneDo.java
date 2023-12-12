@@ -20,12 +20,6 @@ public class NumberOneDo {
                     matrix[j - 1][i - 1] = N;
                     N++;
 
-                    for (int[] x : matrix) {
-                        System.out.println();
-                        for (int y : x) {
-                            System.out.print(y + " ");
-                        }
-                    }
                 }
             }
 
@@ -34,13 +28,14 @@ public class NumberOneDo {
                     matrix[j - 1][i - 1] = N;
                     N++;
 
-                    for (int[] x : matrix) {
-                        System.out.println();
-                        for (int y : x) {
-                            System.out.print(y + " ");
-                        }
-                    }
                 }
+            }
+        }
+
+        for (int[] x : matrix) {
+            System.out.println();
+            for (int y : x) {
+                System.out.print(y + "\t"); //todo лишние прбела
             }
         }
 

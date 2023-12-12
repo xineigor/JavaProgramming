@@ -13,7 +13,7 @@ public class NumberTwo {
         while (numberAmount < amountNumbersIn) {
             int inNumber = Integer.parseInt(scan.nextLine());
             numberAmount++;
-            if ((inNumber > numberMax) && (inNumber % 3 == 0)) {
+            if ((inNumber > numberMax) && (inNumber % 3 == 0)) { //todo 00 -9 yfrjczxbk jnhbwfntkmnyst
                 numberMax = inNumber;
             }
         }

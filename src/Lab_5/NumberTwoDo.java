@@ -12,7 +12,7 @@ public class NumberTwoDo {
 
         String text = scan.nextLine() + " ";
 
-        System.out.println(minimum(text));
+        System.out.println(minimum(text)); //todo от статической избавится парсинг
 
     }
 
@@ -23,7 +23,7 @@ public class NumberTwoDo {
             return min;
         }
 
-        String strOne = text.substring(0, index);
+        String strOne = text.substring(0, index);  // todo в мтеод value
 
         if (!(strOne.matches("[0-9]"))){
             if (!(strOne.contains("-"))){

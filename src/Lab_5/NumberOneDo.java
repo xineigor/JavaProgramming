@@ -12,7 +12,7 @@ public class NumberOneDo {
         int d = Integer.parseInt(scan.nextLine());
 
         System.out.println(area(a, b, c, d));
-        System.out.printf("%.2f", area(a, b, c, d) * 10000);
+        System.out.printf("%.2f", area(a, b, c, d) * 17 * 17);
     }
 
     public static double area(int a, int b, int c, int d) {
