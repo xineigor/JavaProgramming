@@ -13,7 +13,6 @@ public class ExaTwo {
 
     public static void main(String[] args) {
 
-
         char[][][] flat = {
                 {
                         {O, O, O, O, O, P},
@@ -48,12 +47,11 @@ public class ExaTwo {
         while (currentPosition != 'F') {
             String moving = scan.nextLine();
 
+
             int tempCurrentPositionIndexX = currentPositionIndexX;
             int tempCurrentPositionIndexY = currentPositionIndexY;
             int tempCurrentPositionIndexZ = currentPositionIndexZ;
 
-            //flat[currentPositionIndexX][currentPositionIndexY][currentPositionIndexZ] = 'O';
-            //flat[currentPositionIndexX][currentPositionIndexY][currentPositionIndexZ] = 'P';
 
             switch (moving) {
                 case ("w") -> currentPositionIndexY -= 1;
@@ -63,6 +61,19 @@ public class ExaTwo {
             }
 
             currentPosition = flat[currentPositionIndexX][currentPositionIndexY][currentPositionIndexZ];
+
+            if (currentPosition == B){
+                out.println("BLOCK... enter another value");
+
+                switch (moving) {
+                    case ("w") -> currentPositionIndexY += 1;
+                    case ("s") -> currentPositionIndexY -= 1;
+                    case ("a") -> currentPositionIndexZ += 1;
+                    case ("d") -> currentPositionIndexZ -= 1;
+                }
+
+                continue;  //todo выход за пределы try catch
+            }
 
             switch (currentPosition) {
                 case ('L') -> currentPositionIndexX += 1;
@@ -85,7 +96,6 @@ public class ExaTwo {
             char[][] matrix3 = new char[4][5];
             matrix3 = flat[2];
 
-            //flat[currentPositionIndexX][currentPositionIndexY][currentPositionIndexZ] = 'P';
 
             if (currentPositionIndexX == 0) {
                 matrix1[currentPositionIndexY][currentPositionIndexZ] = 'P';
@@ -123,12 +133,9 @@ public class ExaTwo {
 
             }
 
-            //flat[tempCurrentPositionIndexX][tempCurrentPositionIndexY][tempCurrentPositionIndexZ] = 'O';
-
 
         }
 
-//        System.out.println(flat[0][0][5]);
 
     }
 }
