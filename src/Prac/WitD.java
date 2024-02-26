@@ -1,39 +1,22 @@
 package Prac;
 import java.util.Scanner;
 
-public class Wit {
+public class WitD {
     public static void main(String[] args) {
+
         int[] mass = enterArray();
         int size = mass.length;
-        int temp = mass[0];
-
-        int k = 1;
-        int i = 1;
+        int s = 0;
+        int i = 0;
         while (i < size) {
 
-            if (mass[i] > temp) {
-                temp = mass[i];
-                k = 1;
+            if (mass[i] > 0) {
+                s += mass[i];
             }
 
-            else {
-
-                if (mass[i] == temp) {
-
-                    k = k + 1;
-
-                }
-
-            }
-
-            //System.out.println(k);
-            i = i + 1;
-
+            i += 1;
         }
-
-        System.out.println(temp);
-        System.out.println(k);
-        
+        System.out.println(s);
     }
 
     public static int[] enterArray() {
