@@ -45,17 +45,17 @@ public class NumberOne {
                 formatTwoTwoTime = "0" + formatTwoTwoTime;
             }
 
-            boolean minus_check_1 = formatOneOneTime.contains("-"); //проверка выхождения за 00:00
+            boolean minus_check_One = formatOneOneTime.contains("-"); //проверка выхождения за 00:00
             boolean minusCheckTwo = formatTwoTwoTime.contains("-");
 
             int formatOneOneTimeInt = Integer.parseInt(formatOneOneTime);
             int format22_time_int = Integer.parseInt(formatTwoTwoTime);
 
-            if (!((minusCheckTwo) || (minus_check_1))) {
+            if (!((minusCheckTwo) || (minus_check_One))) {
                 System.out.println(formatOneOneTime + ':' + formatTwoTwoTime); //вывод обычный без выхода за 00:00
             }
 
-            if ((minusCheckTwo) || (minus_check_1)) { //перевод в минуты чтобы высчитать выход за 00:00
+            if ((minusCheckTwo) || (minus_check_One)) { //перевод в минуты чтобы высчитать выход за 00:00
 
                 int resultFormat = 1440 + format22_time_int;
                 int formatOneOneTimeIntMin = formatOneOneTimeInt * 60;
