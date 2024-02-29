@@ -11,12 +11,14 @@ public class BlockDiagramK {
         int size = amountNumbers * 2;
         numbersArray = new int[amountNumbers * 2];
         int i = 0;
+
         while (i < size) {
             int temp = scan.nextInt();
             numbersArray[i] = temp;
             i = i + 1;
 
         }
+
         return numbersArray;
 
     }
@@ -44,8 +46,8 @@ public class BlockDiagramK {
             i = i + 1;
         }
 
-        System.out.println(temp);  //макс число
-        System.out.println(k); //сумма повторяющихся
+        System.out.println(temp);  //макс число на данный момент
+        System.out.println(k); // количество элементов равных temp (максимальному числу)
 
     }
 }
