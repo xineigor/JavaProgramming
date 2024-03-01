@@ -16,11 +16,12 @@ public class NumberTwo {
 
     public static int[][] enterArrayS() {  //мето возвращающий из стрики через пробел чисел, массив
         Scanner scan = new Scanner(System.in); //todo вввести размерность массива вначале
+        int arraySize = scan.nextInt();
         String numbersString = scan.nextLine();
         int indexArrayX = 0;
         int indexArrayY = 0;
         int i = 0;
-        int[][] returnArray = new int[4][4];
+        int[][] returnArray = new int[arraySize][arraySize];
         int amountNumbers = numbersString.length() / 2;
         String temp;
 
