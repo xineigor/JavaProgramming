@@ -45,7 +45,7 @@ public class NumberTwo {
         int i = 0;
         int[][] returnArray = new int[arraySize][arraySize];
         int amountNumbers = numbersString.length();
-        String temp;
+        String tempT;
 
         while (i < amountNumbers) {
 
@@ -53,21 +53,26 @@ public class NumberTwo {
                 break;
             }
 
-            temp = numbersString.substring(i, i + 1);
+            tempT = numbersString.substring(i, i + 1);
 
-            if (temp.equals(" ")){
-                numberSpaces += 1;
-//                if (numberSpaces == ((arraySize/2) * (arraySize/2))) {
-//                    sumElementsPartO = sumElementsPartT;
-//                    sumElementsPartT = 0;
-//                }
+//            if (temp.equals(" ")){
+//                numberSpaces += 1;
+////                if (numberSpaces == ((arraySize/2) * (arraySize/2))) {
+////                    sumElementsPartO = sumElementsPartT;
+////                    sumElementsPartT = 0;
+////                }
+//
+//                i += 1;
+//                continue;
+//            }
 
-                i += 1;
-                continue;
-            }
+//            while (!(tempT.equals(" "))){
+//
+//            } ??? todo считывание двузначных чисел
 //            sumElementsPartT = Integer.parseInt(numbersString.substring(i, i + 1));
 ////            System.out.println(temp);
-            returnArray[indexArrayY][indexArrayX] = Integer.parseInt(temp);
+
+            returnArray[indexArrayY][indexArrayX] = Integer.parseInt(tempT);
             indexArrayX += 1;
 
             if (indexArrayX > arraySize - 1) {
