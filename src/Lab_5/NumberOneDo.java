@@ -11,8 +11,8 @@ public class NumberOneDo {
         int c = Integer.parseInt(scan.nextLine());
         int d = Integer.parseInt(scan.nextLine());
 
-        System.out.println(area(a, b, c, d));
-        System.out.printf("%.2f", area(a, b, c, d) * 17 * 17);
+        //System.out.println(area(a, b, c, d));
+        System.out.printf("%.2f", area(a, b, c, d) * 100 * 100);
     }
 
     public static double area(int a, int b, int c, int d) {

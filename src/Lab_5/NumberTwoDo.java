@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class NumberTwoDo {
 
-    static int min = Integer.MAX_VALUE;
+    //static int min = Integer.MAX_VALUE;
 
     public static void main(String[] args) {
 
@@ -15,8 +15,9 @@ public class NumberTwoDo {
         System.out.println(minimum(text)); //todo от статической избавится парсинг
 
     }
-
+    static int min = Integer.MAX_VALUE;
     public static int minimum(String text) {
+
         int index = text.indexOf(' ');
 
         if (index == -1) {
