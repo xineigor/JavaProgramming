@@ -1,4 +1,4 @@
-package Lab_8;
+package Lab_8.Demo_3;
 
 public class Car {
     private String make;

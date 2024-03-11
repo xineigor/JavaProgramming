@@ -1,4 +1,6 @@
-package Lab_8;
+package Lab_8.Demo_3;
+
+import Lab_8.Demo_3.Car;
 
 public class MainCar {
     public static void main(String[] args) {
