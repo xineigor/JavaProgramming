@@ -11,7 +11,7 @@ public class BankAccount {
         this.id = bankAccountCount++;
     }
 
-    public static void setInteresetRate(double interesetRate) {
+    static void setInteresetRate(double interesetRate) {
         BankAccount.interesetRate = interesetRate;
     }
 
