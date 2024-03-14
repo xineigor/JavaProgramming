@@ -7,13 +7,18 @@ public class NumberTwo {
         Scanner scan = new Scanner(System.in);
         int amountNumbersIn = Integer.parseInt(scan.nextLine());
 
+        while (amountNumbersIn < 0) {
+            System.out.println("Repeat!");
+            amountNumbersIn = Integer.parseInt(scan.nextLine());
+        }
+
         int numberMax = 0;
         int numberAmount = 0;
 
         while (numberAmount < amountNumbersIn) {
             int inNumber = Integer.parseInt(scan.nextLine());
             numberAmount++;
-            if ((inNumber > numberMax) && (inNumber % 3 == 0)) { //todo 00 -9 yfrjczxbk jnhbwfntkmnyst
+            if ((inNumber > numberMax) && (inNumber % 3 == 0)) { //todo 00 -9 yfrjczxbk jnhbwfntkmnyst накосяил отрицательтные
                 numberMax = inNumber;
             }
         }

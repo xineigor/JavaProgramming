@@ -26,6 +26,11 @@ public class Bank {
                 continue;
             }
 
+            if (numberAccounts > 100) {
+                System.out.println("Maximum accounts");
+                break;
+            }
+
             if (line.matches("Add Deposit.*")) {
                 String[] arrayValuesDeposit = line.split(" ");
                 tempId = Integer.parseInt(arrayValuesDeposit[2]);
