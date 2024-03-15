@@ -15,11 +15,11 @@ public class Bank {
         while (true) {
             String line = scan.nextLine();
 
-            if (line.equals("End")) {
+            if (line.equalsIgnoreCase("End")) {
                 break;
             }
 
-            if (line.equals("Create")) {
+            if (line.equalsIgnoreCase("Create")) {
                 numberAccounts++;
                 accounts[numberAccounts-1] = new BankAccount();
                 System.out.println("Account " + "ID" + numberAccounts + " created");
