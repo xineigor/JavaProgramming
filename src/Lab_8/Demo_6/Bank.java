@@ -31,7 +31,7 @@ public class Bank {
                 break;
             }
 
-            if (line.matches("Add Deposit.*")) {
+            if (line.matches("(2i)Add Deposit.*")) {
                 String[] arrayValuesDeposit = line.split(" ");
                 tempId = Integer.parseInt(arrayValuesDeposit[2]);
                 tempDeposit = Integer.parseInt(arrayValuesDeposit[3]);
