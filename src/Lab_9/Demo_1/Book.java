@@ -10,6 +10,30 @@ public class Book {
         this.price = price;
     }
 
+    public void setTitle(String title) {
+        if (title.length() < 3) {
+            throw new IllegalArgumentException("Title not valid!");
+        }
+        this.title = title;
+    }
+
+    public void setAuthor(String author) {
+        String[] array = author.split(" ");
+        if (array.length > 2
+            || Character.isDigit(array[0].charAt(0))
+            || Character.isDigit(array[1].charAt(0))) {
+            throw new IllegalArgumentException("Author not valid!");
+        }
+        this.author = author;
+    }
+
+    public void setPrice(Double price) {
+        if (price < 1) {
+            throw new IllegalArgumentException("Price not valid!");
+        }
+        this.price = price;
+    }
+
     public String getTitle() {
         return title;
     }
