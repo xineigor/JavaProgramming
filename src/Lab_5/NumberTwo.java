@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class NumberTwo {
 
-    static int min = Integer.MAX_VALUE;
+    static int min = Integer.MAX_VALUE; // избавится
 
     public static void main(String[] args) {
 

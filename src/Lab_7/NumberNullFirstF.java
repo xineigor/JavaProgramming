@@ -2,7 +2,7 @@ package Lab_7;
 
 import java.util.Scanner;
 
-public class NumberNullFirst {
+public class NumberNullFirstF {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int n = Integer.parseInt(scan.nextLine());
@@ -19,27 +19,13 @@ public class NumberNullFirst {
         System.out.println();
         printMatrix(matrix);
 
-        String[][] reverse = new String[n][m];
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                reverse[n - i - 1][j] = matrix[i][j];
 
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                System.out.print(matrix[i][j] + " ");
             }
+            System.out.println();
         }
-
-        System.out.println();
-        printMatrix(reverse);
-
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m / 2; j++) {
-                int temp = Integer.parseInt(reverse[i][j]);
-                reverse[i][j] = reverse[i][m - j - 1];
-                reverse[i][m - j - 1] = String.valueOf(temp);
-            }
-        }
-
-        System.out.println();
-        printMatrix(reverse);
 
     }
 

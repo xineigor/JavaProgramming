@@ -6,6 +6,7 @@ public class Service {
             for (int y : x) {
                 System.out.print(y + "\t");
             }
+            System.out.print("\b");
             System.out.println();
         }
     }
@@ -15,6 +16,7 @@ public class Service {
             for (String y : x) {
                 System.out.print(y + "\t");
             }
+            System.out.print("\b");
             System.out.println();
         }
     }
