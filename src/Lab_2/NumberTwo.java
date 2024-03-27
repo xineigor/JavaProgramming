@@ -65,6 +65,6 @@ public class NumberTwo {
             default -> System.out.println("NO");
         }
 
-        System.out.printf("%.2f", Price);   // округление в большую сторону
+        System.out.printf("%.2f", Price);   // округление в большую сторону исправить
     }
 }

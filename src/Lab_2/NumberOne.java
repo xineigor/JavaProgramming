@@ -32,6 +32,7 @@ public class NumberOne {
             int time1_int_minuet = timeOneInt * 60; //перевод в минуты
             int sumTime = time1_int_minuet + timeTwoInt; // время прибытия в минутах
             int timeWay = sumTime - way; // время пути в минутах
+
             int formatOneTime = timeWay / 60;
             int formatTwoTime = timeWay % 60;
 

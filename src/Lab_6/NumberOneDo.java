@@ -18,7 +18,7 @@ public class NumberOneDo {
         }
 
         for (int i = 0; i < sum; i++) {
-            numbersSplit = translit(numbersSplit); //todo избавится от пробела 1 2000001
+            numbersSplit = translit(numbersSplit); //todo избавится от пробела 1 2000001 показать в отчёте
         }
 
         System.out.println(sum);

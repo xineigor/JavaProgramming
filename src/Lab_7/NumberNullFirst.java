@@ -27,7 +27,7 @@ public class NumberNullFirst {
         String[][] reverseR = new String[n][m];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                reverseR[i][j] = matrix[i][m - j - 1];
+                reverseR[i][j] = matrix[i][m - j - 1]; // jlby vfccbd gthtdjhfxbdftncz обединить
 
             }
         }

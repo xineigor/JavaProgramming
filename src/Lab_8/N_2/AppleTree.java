@@ -16,6 +16,10 @@ public class AppleTree {
             return 50;
         }
 
+        if (age < 8){
+            return 0;
+        }
+
         return 75;
     }
 
